@@ -24,6 +24,7 @@ import { Url } from 'url';
 
 declare namespace request {
     interface RequestAPI<TRequest extends Request, TOptions extends CoreOptions, TUriUrlOptions> {
+        // tslint:disable unified-signatures
         defaults(options: TOptions): RequestAPI<TRequest, TOptions, RequiredUriUrl>;
         defaults(options: RequiredUriUrl & TOptions): DefaultUriUrlRequestApi<TRequest, TOptions, OptionalUriUrl>;
 
@@ -68,6 +69,7 @@ declare namespace request {
         cookie(str: string): Cookie | undefined;
 
         debug: boolean;
+        // tslint:enable unified-signatures
     }
 
     interface DefaultUriUrlRequestApi<TRequest extends Request,
