@@ -23,5 +23,5 @@ type ClassNamesFn = (...classes: ClassValue[]) => string;
 
 declare const classNames: ClassNamesFn;
 
-export = classNames;
+export default classNames;
 export as namespace classNames;
